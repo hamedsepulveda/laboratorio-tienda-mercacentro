@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrito · Cumbre Andina</title>
+<meta name="description" content="Cumbre Andina: tienda ficticia de café y cacao de especialidad colombiano para un laboratorio académico de Google Analytics 4.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="cab">
+  <a class="marca" href="index.html"><span class="marca__sello" aria-hidden="true">CA</span><span>Cumbre Andina</span></a>
+  <nav class="cab__nav" aria-label="Principal">
+    <a href="index.html">Catálogo</a>
+    <a href="carrito.html" class="cab__carrito">Carrito <span id="contador-carrito" class="contador">0</span></a>
+  </nav>
+</header>
+<main class="contenedor">
+<div id="carrito"></div>
+</main>
+<footer class="pie">
+  <p><strong>Sitio académico de simulación.</strong> Cumbre Andina es una tienda ficticia: no procesa pagos ni guarda datos personales.
+  Este sitio usa Google Analytics 4 con fines didácticos.</p>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/monitor.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/pagina-carrito.js"></script>
+</body>
+</html>

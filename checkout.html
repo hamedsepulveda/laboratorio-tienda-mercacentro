@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout · Cumbre Andina</title>
+<meta name="description" content="Cumbre Andina: tienda ficticia de café y cacao de especialidad colombiano para un laboratorio académico de Google Analytics 4.">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="cab">
+  <a class="marca" href="index.html"><span class="marca__sello" aria-hidden="true">CA</span><span>Cumbre Andina</span></a>
+  <nav class="cab__nav" aria-label="Principal">
+    <a href="index.html">Catálogo</a>
+    <a href="carrito.html" class="cab__carrito">Carrito <span id="contador-carrito" class="contador">0</span></a>
+  </nav>
+</header>
+<main class="contenedor">
+<h1>Checkout</h1>
+<ol class="pasos" aria-label="Pasos del checkout">
+  <li id="ind-1" class="activo">1. Envío</li>
+  <li id="ind-2">2. Pago simulado</li>
+</ol>
+<div class="checkout__grid">
+  <div>
+    <section id="paso-envio" class="panel" aria-labelledby="t-envio">
+      <h2 id="t-envio">Envío</h2>
+      <p class="nota">Todo es ficticio. Usa un nombre inventado y no escribas datos reales: no se guarda ni se envía a Analytics.</p>
+      <div class="campo">
+        <label for="nombre">Nombre ficticio</label>
+        <input id="nombre" type="text" maxlength="40" autocomplete="off" placeholder="Ej.: Cliente Demo">
+        <p id="error-nombre" class="error" role="alert"></p>
+      </div>
+      <div class="campo">
+        <label for="pais">País de destino</label>
+        <select id="pais"></select>
+      </div>
+      <fieldset class="campo">
+        <legend>Servicio de envío</legend>
+        <label class="opcion"><input type="radio" name="servicio" value="Estándar" checked> <span>Estándar</span> <b id="tarifa-Estándar"></b></label>
+        <label class="opcion"><input type="radio" name="servicio" value="Express"> <span>Express</span> <b id="tarifa-Express"></b></label>
+      </fieldset>
+      <button type="button" id="continuar-pago" class="btn btn--primario">Continuar al pago</button>
+    </section>
+    <section id="paso-pago" class="panel" aria-labelledby="t-pago" hidden>
+      <h2 id="t-pago">Pago simulado</h2>
+      <p class="nota">No se pide ni se guarda ningún dato de tarjeta o cuenta. Elige un método para practicar el evento <b>add_payment_info</b>.</p>
+      <fieldset class="campo">
+        <legend>Método de pago</legend>
+        <label class="opcion"><input type="radio" name="pago" value="Tarjeta de crédito" checked> <span>Tarjeta de crédito</span></label>
+        <label class="opcion"><input type="radio" name="pago" value="PSE"> <span>PSE</span></label>
+        <label class="opcion"><input type="radio" name="pago" value="Nequi"> <span>Nequi</span></label>
+        <label class="opcion"><input type="radio" name="pago" value="PayPal"> <span>PayPal</span></label>
+      </fieldset>
+      <div class="acciones">
+        <button type="button" id="volver-envio" class="btn btn--secundario">Volver al envío</button>
+        <button type="button" id="pagar" class="btn btn--primario">Pagar (simulado)</button>
+      </div>
+    </section>
+  </div>
+  <aside id="resumen-checkout" class="resumen" aria-live="polite"></aside>
+</div>
+</main>
+<footer class="pie">
+  <p><strong>Sitio académico de simulación.</strong> Cumbre Andina es una tienda ficticia: no procesa pagos ni guarda datos personales.
+  Este sitio usa Google Analytics 4 con fines didácticos.</p>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/monitor.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/pagina-checkout.js"></script>
+</body>
+</html>

@@ -15,6 +15,6 @@
       false → modo normal: los eventos NO van a DebugView.
 */
 window.TIENDA_CONFIG = {
-  GA_MEASUREMENT_ID: "G-XXXXXXXXXX", // ← pega aquí tu ID, entre comillas
+  GA_MEASUREMENT_ID: "G-02TWDQ869D", // ← pega aquí tu ID, entre comillas
   DEBUG_MODE: true                   // ← true para DebugView, false para producción
 };
